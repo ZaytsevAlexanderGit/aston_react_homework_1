@@ -1,15 +1,16 @@
+import type { FC } from 'react';
 import styles from './PostCard.module.css';
-import type { TPostData } from '../../../widgets/PostList/types.ts';
+import type { PostProps } from '../../../widgets/PostList/types.ts';
 
-interface IPostCard {
-  postData: TPostData;
-}
+type PostCardProps = {
+  post: PostProps;
+};
 
-export const PostCard = ({ postData }: IPostCard) => {
+export const PostCard: FC<PostCardProps> = ({ post }) => {
   return (
     <article className={styles.postCard}>
-      <h3>{postData.header}</h3>
-      <p>{postData.postBody}</p>
+      <h3>{post.header}</h3>
+      <p>{post.postBody}</p>
     </article>
   );
 };

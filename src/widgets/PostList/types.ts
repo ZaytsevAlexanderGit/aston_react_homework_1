@@ -1,4 +1,4 @@
-export type TPostData = {
+export type PostProps = {
   number: number;
   id: string;
   header: string;
