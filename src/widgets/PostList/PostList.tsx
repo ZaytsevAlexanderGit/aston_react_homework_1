@@ -8,13 +8,13 @@ interface IPostList {
 
 export const PostList = ({ posts }: IPostList) => {
   return (
-    <>
+    <div className={styles.postListWrapper}>
       <h2 className={styles.postListHeader}>Post List:</h2>
       <ul className={styles.postList}>
         {posts.map((post) => (
           <PostCard key={post.id} postData={post} />
         ))}
       </ul>
-    </>
+    </div>
   );
 };

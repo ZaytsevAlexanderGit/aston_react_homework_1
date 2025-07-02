@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 import styles from './MainLayout.module.css';
-import { Header, Footer } from '../widgets/index.ts';
+import { Header, Footer } from '../widgets';
 
 interface IMainLayoutProps {
   children: ReactNode;
