@@ -1,5 +1,9 @@
 import styles from './Footer.module.css';
 
 export const Footer = () => {
-  return <h1 className={styles.Footer}>Выполнил: Зайцев Александр.</h1>;
+  return (
+    <footer className={styles.Footer}>
+      <h4>Выполнил: Зайцев Александр.</h4>
+    </footer>
+  );
 };

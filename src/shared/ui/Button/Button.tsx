@@ -1,22 +1,22 @@
 import styles from './Button.module.css';
-import type { SyntheticEvent } from 'react';
+import React, { type SyntheticEvent } from 'react';
 import clsx from 'clsx';
 
-type TButton = 'toggleModal' | 'submit';
+type ButtonType = 'primary' | 'secondary' | 'submit' | 'closeModalCross';
 
-interface IButton {
-  buttonType: TButton;
-  buttonText: string;
-  onClick?: (event: SyntheticEvent) => void;
-}
+type ButtonProps = {
+  buttonType: ButtonType;
+  onClick: (event: SyntheticEvent) => void;
+  children: React.ReactNode;
+};
 
-export function Button({ buttonType, buttonText, onClick }: IButton) {
+export function Button({ buttonType, onClick, children }: ButtonProps) {
   return (
     <button
       className={clsx(styles.button, styles[`${buttonType}`])}
       onClick={onClick}
     >
-      {buttonText}
+      {children}
     </button>
   );
 }

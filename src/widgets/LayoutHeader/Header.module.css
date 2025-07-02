@@ -4,3 +4,10 @@
     align-items: center;
     gap:15px;
 }
+
+.modalHeader {
+}
+
+.modalText {
+    padding:20px;
+}

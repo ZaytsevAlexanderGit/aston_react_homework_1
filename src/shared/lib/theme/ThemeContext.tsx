@@ -1,24 +1,39 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 type TThemeContextProviderProps = {
   children: React.ReactNode;
 };
 
-type TTheme = 'dark' | 'light';
+type ThemeType = 'dark' | 'light';
 
-type TThemeContext = {
-  theme: TTheme;
-  setTheme: React.Dispatch<React.SetStateAction<TTheme>>;
+type ThemeContext = {
+  theme: ThemeType;
+  setTheme: React.Dispatch<React.SetStateAction<ThemeType>>;
 };
 
-export const ThemeContext = createContext<TThemeContext | null>(null);
+const ThemeContext = createContext<ThemeContext | null>(null);
 
 export function ThemeContextProvider({ children }: TThemeContextProviderProps) {
-  const [theme, setTheme] = useState<TTheme>('light');
+  const [theme, setTheme] = useState<ThemeType>('light');
+
+  const currentTheme = theme === 'dark' ? 'darkTheme' : 'lightTheme';
+
+  useEffect(() => {
+    document.body.className = currentTheme;
+  }, [currentTheme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
+}
+
+// eslint-disable-next-line react-refresh/only-export-components
+export function useTheme() {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useTheme must be used within ThemeContext.Provider');
+  }
+  return context;
 }
