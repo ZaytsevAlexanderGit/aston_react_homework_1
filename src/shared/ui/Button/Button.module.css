@@ -1,0 +1,27 @@
+.button {
+    inline-size: fit-content;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border:1px solid var(--text-color);
+    cursor: pointer;
+    transition: box-shadow 0.4s;
+}
+
+.secondary:hover {
+    box-shadow: 2px 2px 2px var(--text-color);
+}
+
+.secondary:active{
+    box-shadow: none;
+}
+
+.closeModalCross {
+    position: absolute;
+    top:10px;
+    right:10px;
+    border:none;
+    color:var(--text-color);
+    background-color:transparent;
+}
