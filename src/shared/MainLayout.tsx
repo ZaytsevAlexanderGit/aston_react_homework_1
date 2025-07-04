@@ -9,10 +9,10 @@ type MainLayoutProps = {
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <>
+    <div className={styles.layout}>
       <Header />
       <main className={styles.mainLayout}>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
