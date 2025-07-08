@@ -1,0 +1,28 @@
+.commentsBlock {
+  padding:1rem 2rem;
+  display:flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.commentsBlock__comment {
+  list-style: none;
+  inline-size: 100%;
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, max-content);
+  border-block-start: dashed 1px gray;
+
+  &:last-of-type {
+    border-block-end: dashed 1px gray;
+  }
+}
+
+.commentsBlock__comment_text {
+  justify-self: start;
+}
+
+.commentsBlock__comment_other {
+  display: flex;
+  justify-content: space-between;
+  color:gray;
+}
