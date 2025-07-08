@@ -1,4 +1,4 @@
-import styles from './Modal.module.css';
+import styles from './Modal.module.scss';
 import { createPortal } from 'react-dom';
 import {
   createContext,

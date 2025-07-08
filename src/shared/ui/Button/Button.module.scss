@@ -7,14 +7,14 @@
     border:1px solid var(--text-color);
     cursor: pointer;
     transition: box-shadow 0.4s;
-}
 
-.secondary:hover {
-    box-shadow: 2px 2px 2px var(--text-color);
-}
+    &:hover {
+        background-color: var(--button-hover-color);
+    }
 
-.secondary:active{
-    box-shadow: none;
+    &:active {
+        background-color: var(--background-color);
+    }
 }
 
 .closeModalCross {
@@ -24,4 +24,14 @@
     border:none;
     color:var(--text-color);
     background-color:transparent;
+}
+
+.showComments {
+    align-self: end;
+}
+
+.showPost {
+    padding:2px;
+    border-radius: 4px;
+    align-self: end;
 }

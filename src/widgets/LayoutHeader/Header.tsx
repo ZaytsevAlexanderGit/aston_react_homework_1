@@ -1,4 +1,4 @@
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 import { ThemeSwitcher } from '../../features/ThemeSwitcher/ui/ThemSwitcher.tsx';
 import { Modal } from '../../shared/ui/Modal/Modal.tsx';
 import { useState } from 'react';
@@ -16,7 +16,7 @@ export const Header = () => {
       <ThemeSwitcher />
       <h1 className={styles.header}>React интенсив: Домашнее Задание.</h1>
       <Button buttonType={'secondary'} onClick={handleToggleModal}>
-        Информация о проекте.
+        Информация о проекте
       </Button>
       {showModal && (
         <Modal

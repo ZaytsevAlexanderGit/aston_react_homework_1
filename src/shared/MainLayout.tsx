@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import styles from './MainLayout.module.css';
+import styles from './MainLayout.module.scss';
 import { Header, Footer } from '../widgets';
 
 type MainLayoutProps = {

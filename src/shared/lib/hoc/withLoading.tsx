@@ -15,7 +15,7 @@ export function withLoading<P extends object>(
     }, []);
 
     if (isLoading) {
-      return <div>Loading...</div>;
+      return <div>Загрузка...</div>;
     }
 
     return <WrappedComponent {...(props as P)} />;
