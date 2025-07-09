@@ -20,14 +20,12 @@ export const Header = () => {
       </Button>
       {showModal && (
         <Modal handleClose={handleToggleModal}>
-          <>
-            <h3 className={styles.modalHeader}>О Проекте</h3>
-            <ol className={styles.modalText}>
-              <li>Приложение, с отрисовкой списка постов.</li>
-              <li>Реализованно переключение светлои и темной тем.</li>
-              <li>Реализовано модальное окно, которое Вы сейчас наблюдаете.</li>
-            </ol>
-          </>
+          <h3 className={styles.modalHeader}>О Проекте</h3>
+          <ol className={styles.modalText}>
+            <li>Приложение, с отрисовкой списка постов.</li>
+            <li>Реализованно переключение светлои и темной тем.</li>
+            <li>Реализовано модальное окно, которое Вы сейчас наблюдаете.</li>
+          </ol>
         </Modal>
       )}
     </header>
