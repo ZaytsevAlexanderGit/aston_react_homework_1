@@ -1,4 +1,4 @@
-import { type FC, useEffect, useRef, useState } from 'react';
+import React, { type FC, useEffect, useRef, useState } from 'react';
 import styles from './PostCard.module.scss';
 import type { PostProps } from '../types/types.ts';
 import { Button } from '../../../shared/ui/Button/Button.tsx';
@@ -11,11 +11,11 @@ type PostCardProps = {
   toggleComments: (postId: string) => void;
 };
 
-export const PostCard: FC<PostCardProps> = ({
+export const PostCard: FC<PostCardProps> = React.memo(function PostCard({
   post,
   showComments,
   toggleComments,
-}) => {
+}) {
   const [expanded, setExpanded] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const contentRef = useRef<HTMLParagraphElement>(null);
@@ -66,4 +66,4 @@ export const PostCard: FC<PostCardProps> = ({
       </article>
     </li>
   );
-};
+});
