@@ -1,14 +1,19 @@
 .switcherWrapper {
     position:absolute;
-    right:2rem;
-    top:2rem;
+    right:1rem;
+    top:0;
+
+    @media (max-width: 1000px) {
+        right: 1rem;
+        top: -1.25rem;
+    }
 }
 
 .switch {
     position: relative;
     display: inline-block;
     width: 50px;
-    height: 29px;
+    height: 30px;
 }
 
 .switch input {
@@ -48,16 +53,16 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(21px);
-    -ms-transform: translateX(21px);
-    transform: translateX(21px);
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
     color:white;
     content: "☽";
     background-color: #404040;
 }
 
 .slider.round {
-    border-radius: 29px;
+    border-radius: 20px;
 }
 
 .slider.round:before {
