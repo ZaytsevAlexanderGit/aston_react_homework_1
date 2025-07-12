@@ -1,0 +1,14 @@
+.headerWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+}
+
+.modalHeader {
+}
+
+.modalText {
+    padding:20px;
+}

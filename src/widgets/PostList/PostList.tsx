@@ -11,13 +11,13 @@ export const PostList = () => {
   }, []);
 
   return (
-    <>
+    <div className={styles.postListWrapper}>
       <h2 className={styles.postListHeader}>Post List:</h2>
       <ul className={styles.postList}>
         {posts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}
       </ul>
-    </>
+    </div>
   );
 };

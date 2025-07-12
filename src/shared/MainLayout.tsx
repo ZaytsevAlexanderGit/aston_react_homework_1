@@ -1,18 +1,18 @@
 import type { ReactNode } from 'react';
 
 import styles from './MainLayout.module.css';
-import { Header, Footer } from '../widgets/index.ts';
+import { Header, Footer } from '../widgets';
 
-interface IMainLayoutProps {
+type MainLayoutProps = {
   children: ReactNode;
-}
+};
 
-export const MainLayout = ({ children }: IMainLayoutProps) => {
+export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div className={styles.mainLayout}>
+    <>
       <Header />
-      {children}
+      <main className={styles.mainLayout}>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };

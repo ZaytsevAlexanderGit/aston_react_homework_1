@@ -1,3 +1,9 @@
+.postListWrapper {
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
 .postList {
     display: grid;
     grid-template-columns: repeat(4,  1fr);
